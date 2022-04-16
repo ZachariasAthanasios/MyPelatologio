@@ -1,0 +1,38 @@
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 18.125rem;
+	}
+
+	.login-content h2{
+        font-size: 2.4rem;
+        margin: 0.5rem 0;
+	}
+
+	.img img{
+		width: 25rem;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.img{
+		display: none;
+	}
+
+	.wave{
+		display: none;
+	}
+
+	.login-content{
+		justify-content: center;
+	}
+}

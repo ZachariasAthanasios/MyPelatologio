@@ -19,15 +19,18 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <img class="wave" src="images/wave.png">
 	<div class="container">
 		<div class="img">
 			<img src="images/login.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+
+            <!-- Login Form -->
+			<form action="" method="POST">
 				<img src="images/user.svg">
 				<h2 class="title">Welcome</h2>
+
+                <!-- Username Input -->
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
@@ -37,6 +40,8 @@
            		   		<input type="text" class="input">
            		   </div>
            		</div>
+
+                <!-- Password Input -->
            		<div class="input-div pass">
            		   <div class="i"> 
            		    	<i class="fas fa-lock"></i>
@@ -46,7 +51,11 @@
            		    	<input type="password" class="input">
             	   </div>
             	</div>
+
+                <!--Forgot Password link -->
             	<a href="#">Forgot Password?</a>
+
+                <!-- Login Button -->
             	<input type="submit" class="btn" value="Login">
             </form>
         </div>

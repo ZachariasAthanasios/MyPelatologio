@@ -2,5 +2,11 @@
 @import url(./helpers/_reset.css);
 @import url(./helpers/_variables.css);
 
+
 /* Import Layout CSS */
-@import url(./layout/_login-signup.css);
+    /* Login - SignUp Page */
+    @import url(./layout/login-signup/_login-signup.css);
+    @import url(./layout/login-signup/_responsive.css);
+        /* Forgot Password Page */
+    
+    /* Dashboard Page */
