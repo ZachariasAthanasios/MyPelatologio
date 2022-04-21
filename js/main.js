@@ -17,3 +17,7 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addfocus);
 	input.addEventListener("blur", remfocus);
 });
+
+
+
+// Sidebar Active Link

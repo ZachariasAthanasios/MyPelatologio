@@ -10,7 +10,7 @@
     <meta name="author" content="Zacharias Athanasios">
 
     <!-- Page Title -->
-    <title>Login | MyCMS</title>
+    <title>Login | MyPelatologio</title>
 
     <!-- Font-Awesome CDN Link 6.1.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -53,7 +53,7 @@
             	</div>
 
                 <!--Forgot Password link -->
-            	<a href="#">Forgot Password?</a>
+            	<a class="forgot-password" href="#">Forgot Password?</a>
 
                 <!-- Login Button -->
             	<input type="submit" class="btn" value="Login">

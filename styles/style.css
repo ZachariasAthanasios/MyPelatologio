@@ -7,6 +7,11 @@
     /* Login - SignUp Page */
     @import url(./layout/login-signup/_login-signup.css);
     @import url(./layout/login-signup/_responsive.css);
-        /* Forgot Password Page */
     
+    /* Forgot Password Page */
+    
+    /* Sidebar */
+    @import url(./layout/sidebar/sidebar.css);
+
     /* Dashboard Page */
+    @import url(./layout/dashboard/dashboard.css);

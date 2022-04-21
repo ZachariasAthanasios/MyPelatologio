@@ -1,0 +1,96 @@
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-left: 10px solid var(--primary-color);
+    transition: 0.5s;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.active {
+    background-color: var(--white-color);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.active a {
+    color: var(--primary-color);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon i {
+    font-size: 1.75rem;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.active a::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white-color);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.active a::after  {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white-color);
+    pointer-events: none;
+}

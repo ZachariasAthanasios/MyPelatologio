@@ -128,7 +128,7 @@ form{
 	margin-bottom: 0.25rem;
 }
 
-a{
+.forgot-password {
 	display: block;
 	text-align: right;
 	text-decoration: none;
@@ -137,7 +137,7 @@ a{
 	transition: 0.3s;
 }
 
-a:hover{
+.forgot-password:hover{
 	color: var(--primary-color);
 }
 
