@@ -24,6 +24,28 @@
         <!-- Navbar Menu -->
         <?php include ('includes/sidebar.php'); ?>
 
+        <!-- Main -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Search Field -->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                
+                <!-- Users Profile Image -->
+                <div class="user">
+                    <img src="./images/userProfileImage.jpg" alt="User Profile Image" width="100" height="100">
+                </div>
+            </div>
+        </div>
+
         
     </div>
 
