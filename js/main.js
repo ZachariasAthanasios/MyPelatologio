@@ -21,3 +21,4 @@ inputs.forEach(input => {
 
 
 // Sidebar Active Link
+// Θέλω να υπάρχει το hover effect στο Sidebar στην σελίδα όπου θα βρίσκομαι.

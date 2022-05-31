@@ -26,6 +26,8 @@
 
         <!-- Main -->
         <div class="main">
+
+            <!-- Top Bar -->
             <div class="topbar">
                 <div class="toggle">
                     <i class="fa-solid fa-bars"></i>
@@ -44,10 +46,73 @@
                     <img src="./images/userProfileImage.jpg" alt="User Profile Image" width="100" height="100">
                 </div>
             </div>
+
+            <!-- Information Cards -->
+            <div class="cardBox">
+
+                <!-- Card #1 -->
+                <div class="card">
+                    <div>
+                        <div class="numbers">1.504</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+
+                <!-- Card #2 -->
+                <div class="card">
+                    <div>
+                        <div class="numbers">1.504</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+
+                <!-- Card #3 -->
+                <div class="card">
+                    <div>
+                        <div class="numbers">1.504</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+
+                <!-- Card #4 -->
+                <div class="card">
+                    <div>
+                        <div class="numbers">1.504</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details List -->
+
         </div>
 
         
     </div>
+
+    <script>
+        // Sidebar - Menu Toggle
+        let toggle = document.querySelector(".toggle");
+        let navigation = document.querySelector(".navigation");
+        let main = document.querySelector(".main");
+
+        toggle.onclick = function() {
+	        navigation.classList.toggle("active");
+            main.classList.toggle("active");
+        }
+    </script>
 
     <!-- Custom JS File Link -->
     <script type="text/javascript" src="js/main.js"></script>

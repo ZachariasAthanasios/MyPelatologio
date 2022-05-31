@@ -7,6 +7,14 @@
     transition: 0.5s;
 }
 
+.navigation.active {
+    width: 80px;
+}
+
+.navigation.active ul li a .title {
+    display: none;
+}
+
 .navigation ul {
     position: absolute;
     top: 0;
