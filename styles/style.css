@@ -14,4 +14,5 @@
     @import url(./layout/sidebar/sidebar.css);
 
     /* Dashboard Page */
-    @import url(./layout/dashboard/dashboard.css);
+    @import url(./layout/dashboard/_dashboard.css);
+    @import url(./layout/dashboard/_responsive.css);

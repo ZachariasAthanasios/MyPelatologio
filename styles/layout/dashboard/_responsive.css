@@ -1,0 +1,29 @@
+/* @media screen and (max-width: 991px) {
+    .navigation {
+        left: -300px;
+    }
+
+    .navigation.active {
+        width: 80px;
+        left: 0;
+    }
+
+    #main {
+        width: 100%;
+        left: 0;
+    }
+
+    #main.active {
+        left: 80px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */

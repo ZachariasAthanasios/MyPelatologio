@@ -25,7 +25,7 @@
         <?php include ('includes/sidebar.php'); ?>
 
         <!-- Main -->
-        <div class="main">
+        <div class="main" id="main">
 
             <!-- Top Bar -->
             <div class="topbar">
@@ -95,8 +95,10 @@
                 </div>
             </div>
 
-            <!-- Recent Customers Detail List -->
+            
             <div class="details">
+
+                <!-- Recent Customers Detail List -->
                 <div class="recentCustomers">
                     <div class="cardHeader">
                         <h2>Recent Customers</h2>
@@ -154,6 +156,59 @@
                                 <td> <span class="status new">New Customer</span> </td>
                             </tr>
                         </tbody>
+                    </table>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Orders</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <h4>Digital Marketing</h4>
+                                <span>Zacharias Thanos</span>
+                            </td>
+                            <td> <span class="status delivered">Delivered</span> </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <h4>Digital Marketing</h4>
+                                <span>Zacharias Thanos</span>
+                            </td>
+                            <td> <span class="status pending">Pending</span> </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <h4>Digital Marketing</h4>
+                                <span>Zacharias Thanos</span>
+                            </td>
+                            <td> <span class="status canceling">Canceling</span> </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <h4>Digital Marketing</h4>
+                                <span>Zacharias Thanos</span>
+                            </td>
+                            <td> <span class="status inprogress">In progress</span> </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <h4>Digital Marketing</h4>
+                                <span>Zacharias Thanos</span>
+                            </td>
+                            <td> <span class="status inprogress">In progress</span> </td>
+                        </tr>
                     </table>
                 </div>
             </div>
