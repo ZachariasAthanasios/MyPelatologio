@@ -136,3 +136,109 @@
 
 
 /* Details List */
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+
+.details .recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 350px;
+    background-color: var(--white-color);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.btn-view_all {
+    position: relative;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    color: var(--white-color);
+    border-radius: 5px;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600;
+}
+
+.details .recentCustomers table tr {
+    color: var(--black-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .recentCustomers table tr:last-child {
+    border-bottom: none;
+}
+
+.details .recentCustomers table tbody tr:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.details .recentCustomers table tr td {
+    padding: 10px;
+}
+
+.details .recentCustomers table tr td:last-child {
+    text-align: end;
+}
+
+.details .recentCustomers table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.details .recentCustomers table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.new {
+    padding: 2px 4px;
+    background-color: #2ce04a;
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.ok {
+    padding: 2px 4px;
+    background-color: #e0832c;
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.good {
+    padding: 2px 4px;
+    background-color: #a34aeb;
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}

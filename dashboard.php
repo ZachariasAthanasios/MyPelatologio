@@ -95,7 +95,68 @@
                 </div>
             </div>
 
-            <!-- Details List -->
+            <!-- Recent Customers Detail List -->
+            <div class="details">
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                        <a href="#" class="btn-view_all">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Company</td>
+                                <td>Orders</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zacharias Thanos</td>
+                                <td>Airbyte.gr</td>
+                                <td>1</td>
+                                <td> <span class="status ok">Ok Customer</span> </td>
+                            </tr>
+
+                            <tr>
+                                <td>Zacharias Thanos</td>
+                                <td>Airbyte.gr</td>
+                                <td>1</td>
+                                <td> <span class="status good">Good Customer</span> </td>
+                            </tr>
+
+                            <tr>
+                                <td>Zacharias Thanos</td>
+                                <td>Airbyte.gr</td>
+                                <td>1</td>
+                                <td> <span class="status new">New Customer</span> </td>
+                            </tr>
+
+                            <tr>
+                                <td>Zacharias Thanos</td>
+                                <td>Airbyte.gr</td>
+                                <td>1</td>
+                                <td> <span class="status new">New Customer</span> </td>
+                            </tr>
+
+                            <tr>
+                                <td>Zacharias Thanos</td>
+                                <td>Airbyte.gr</td>
+                                <td>1</td>
+                                <td> <span class="status new">New Customer</span> </td>
+                            </tr>
+
+                            <tr>
+                                <td>Zacharias Thanos</td>
+                                <td>Airbyte.gr</td>
+                                <td>1</td>
+                                <td> <span class="status new">New Customer</span> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
 
