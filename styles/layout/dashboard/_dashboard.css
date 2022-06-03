@@ -26,7 +26,7 @@
     padding: 0 10px;
 }
 
-.container-dashboard .main .topbar  .toggle {
+.container-dashboard .main .topbar .toggle {
     position: relative;
     width: 60px;
     height: 60px;
@@ -71,7 +71,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    overflow: hidden;
     cursor: pointer;    
 }
 
@@ -223,6 +222,7 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .status.ok {
@@ -232,6 +232,7 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .status.good {
@@ -241,6 +242,7 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 
@@ -313,4 +315,5 @@
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
+    white-space: nowrap;
 }

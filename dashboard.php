@@ -43,7 +43,7 @@
                 
                 <!-- Users Profile Image -->
                 <div class="user">
-                    <img src="./images/userProfileImage.jpg" alt="User Profile Image" width="100" height="100">
+                    <img src="./images/userProfileImage.jpg" alt="User Profile Image">
                 </div>
             </div>
 
@@ -99,7 +99,7 @@
             <div class="details">
 
                 <!-- Recent Customers Detail List -->
-                <div class="recentCustomers">
+                <div class="recentCustomers" id="recentCustomers">
                     <div class="cardHeader">
                         <h2>Recent Customers</h2>
                         <a href="#" class="btn-view_all">View All</a>
@@ -115,7 +115,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Zacharias Thanos</td>
+                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
                                 <td>Airbyte.gr</td>
                                 <td>1</td>
                                 <td> <span class="status ok">Ok Customer</span> </td>
@@ -160,7 +160,7 @@
                 </div>
 
                 <!-- Recent Orders -->
-                <div class="recentOrders">
+                <div class="recentOrders" id="recentOrders">
                     <div class="cardHeader">
                         <h2>Recent Orders</h2>
                     </div>
@@ -198,7 +198,7 @@
                                 <h4>Digital Marketing</h4>
                                 <span>Zacharias Thanos</span>
                             </td>
-                            <td> <span class="status inprogress">In progress</span> </td>
+                            <td> <span class="status inprogress">In Progress</span> </td>
                         </tr>
 
                         <tr>
@@ -207,12 +207,14 @@
                                 <h4>Digital Marketing</h4>
                                 <span>Zacharias Thanos</span>
                             </td>
-                            <td> <span class="status inprogress">In progress</span> </td>
+                            <td> <span class="status inprogress">In Progress</span> </td>
                         </tr>
                     </table>
                 </div>
             </div>
 
+            <!-- Copyright -->
+            <span class="copyright">Desinged by Sugarman</span>
         </div>
 
         

@@ -1,29 +1,47 @@
-/* @media screen and (max-width: 991px) {
+@media (max-width: 1400px) {
     .navigation {
         left: -300px;
     }
 
     .navigation.active {
         width: 80px;
-        left: 0;
+        left: 0px;
     }
 
     #main {
         width: 100%;
-        left: 0;
+        left: 0px;
     }
 
     #main.active {
+        width: calc(100% - 80px);
         left: 80px;
-    }
-
-    .cardBox {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1200px) {
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .details {
         grid-template-columns: repeat(1, 1fr);
     }
-} */
+
+    .details .recentOrders table tr td:last-child {
+        text-align: end;
+    }
+}
+
+@media (max-width: 768px) {
+    #recentCustomers, 
+    #recentOrders {
+        overflow-x: auto !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
