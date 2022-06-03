@@ -317,3 +317,9 @@
     font-weight: 500;
     white-space: nowrap;
 }
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
