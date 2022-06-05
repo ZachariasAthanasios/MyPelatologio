@@ -26,7 +26,7 @@
 		<div class="login-content">
 
             <!-- Login Form -->
-			<form action="" method="POST">
+			<form action="database/login.db.php" method="POST">
 				<img src="images/user.svg">
 				<h2 class="title">Welcome</h2>
 
@@ -37,7 +37,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="text" name="username" class="input">
            		   </div>
            		</div>
 
@@ -48,7 +48,7 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" name="password" class="input">
             	   </div>
             	</div>
 
@@ -56,7 +56,7 @@
             	<a class="forgot-password" href="#">Forgot Password?</a>
 
                 <!-- Login Button -->
-            	<input type="submit" class="btn" value="Login">
+            	<input type="submit" name="submit" class="btn" value="Login">
             </form>
         </div>
     </div>
