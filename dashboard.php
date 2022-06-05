@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+    <?php
+        include_once "database/dbh.db.php";
+        if (!isset($_SESSION['adminsUsername'])) {
+            header("Location: http://localhost/MyPelatologio/index.php?error=YouNeedToLoginFirst");
+        }
+    ?>
+
     <div class="container-dashboard">
         
         <!-- Navbar Menu -->

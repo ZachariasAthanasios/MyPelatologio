@@ -1,6 +1,6 @@
 <?php 
 
-// session_start();
+session_start();
 
 if (isset($_POST['submit'])) {
     function validate($data) {
@@ -10,13 +10,13 @@ if (isset($_POST['submit'])) {
         return $data;
     }
 
-    include "dbh.db.php";
-
     $username = validate($_POST['username']);
     $password = validate($_POST['password']);
 
+    include "dbh.db.php";
+
     if (empty($username) || empty($password)) {
-        header("Location: ../index.php?error=emptyInputs")
+        header("Location: http://localhost/MyPelatologio/index.php?error=emptyInputs");
         exit();
     } else {
         $sql = "SELECT * FROM admins WHERE adminsUsername = '$username' AND adminsPassword = '$password';";
@@ -25,22 +25,22 @@ if (isset($_POST['submit'])) {
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
             if ($row['adminsUsername'] === $username && $row['adminsPassword'] === $password) {
-                // $_SESSION['adminsID'] = $row['adminsID'];
                 $_SESSION['adminsUsername'] = $row['adminsUsername'];
-                // $_SESSION['adminsFname'] = $row['adminsFname'];
-                // $_SESSION['adminsLname'] = $row['adminsLname'];
-                header("Location: ../dashboard.php")
+                $_SESSION['adminsID'] = $row['adminsID'];
+                $_SESSION['adminsFname'] = $row['adminsFname'];
+                $_SESSION['adminsLname'] = $row['adminsLname'];
+                header("Location: http://localhost/MyPelatologio/dashboard.php?login=successfully");
                 exit();
             } else {
-                header("Location: ../index.php?error=InvaliadUsernameAndPassword");
+                header("Location: http://localhost/MyPelatologio/index.php?error=InvaliadUsernameAndPassword");
                 exit();
             }
         } else {
-            header("Location: ../index.php?error=InvaliadUsernameAndPassword");
+            header("Location: http://localhost/MyPelatologio/index.php?error=InvaliadUsernameAndPassword");
             exit();
         }
     }
 } else {
-    header("Location: ../index.php");
+    header("Location: http://localhost/MyPelatologio/index.php?error=katilogin");
     exit();
 }

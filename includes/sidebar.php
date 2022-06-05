@@ -2,7 +2,7 @@
     <ul>
         <!-- Logo and Brand Name -->
         <li>
-            <a href="#">
+            <a href="http://localhost/MyPelatologio/dashboard.php">
                 <span class="icon"> <i class="fa-solid fa-chart-line"></i> </span>
                 <span class="title">MyPelatologio</span>
             </a>
@@ -10,7 +10,7 @@
 
         <!-- Dashboard -->
         <li>
-            <a href="#">
+            <a href="http://localhost/MyPelatologio/dashboard.php">
                 <span class="icon"> <i class="fa-solid fa-house"></i> </span>
                 <span class="title">Dashboard</span>
             </a>
@@ -42,7 +42,7 @@
 
         <!-- Logout -->
         <li>
-            <a href="#">
+            <a href="http://localhost/MyPelatologio/database/logout.db.php">
                 <span class="icon"> <i class="fa-solid fa-arrow-right-from-bracket"></i> </span>
                 <span class="title">Logout</span>
             </a>

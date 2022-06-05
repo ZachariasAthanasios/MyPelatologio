@@ -2,6 +2,6 @@
 
     session_start();
     session_destroy();
-    header("Location: http://http://localhost/MyPelatologio/index.php?status=logout");
+    header("Location: http://localhost/MyPelatologio/index.php?status=logout");
 
 ?>
