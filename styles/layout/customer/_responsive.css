@@ -1,0 +1,5 @@
+@media (max-width: 1200px) {
+    #customers {
+        overflow-x: auto !important;
+    }
+}

@@ -1,0 +1,72 @@
+/* Details List */
+.details-admin {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+}
+
+.details-admin .admins {
+    position: relative;
+    display: grid;
+    min-height: 350px;
+    background-color: var(--white-color);
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.details-admin table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details-admin table thead td {
+    font-weight: 600;
+}
+
+.details-admin .admins table tr {
+    color: var(--black-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details-admin .admins table tr:last-child {
+    border-bottom: none;
+}
+
+.details-admin .admins table tbody tr:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.details-admin .admins table tr td {
+    padding: 10px;
+}
+
+.details-admin .admins table tr td:last-child {
+    text-align: end;
+}
+
+.details-admin .admins table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.details-admin .admins table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.details-admin .admins table tr td:nth-child(4) {
+    text-align: center;
+}
+
+.details-admin .admins table tr td:nth-child(5) {
+    text-align: center;
+}
+
+.admin-role {
+    white-space: nowrap;
+}

@@ -16,3 +16,11 @@
     /* Dashboard Page */
     @import url(./layout/dashboard/_dashboard.css);
     @import url(./layout/dashboard/_responsive.css);
+
+    /* Admin Page */
+    @import url(./layout/admin/_admin.css);
+    @import url(./layout/admin/_responsive.css);
+
+    /* Customer Page */
+    @import url(./layout/customer/_customer.css);
+    @import url(./layout/customer/_responsive.css);

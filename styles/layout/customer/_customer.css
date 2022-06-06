@@ -1,0 +1,61 @@
+/* Details List */
+.details-customer {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+}
+
+.details-customer .customers {
+    position: relative;
+    display: grid;
+    min-height: 350px;
+    background-color: var(--white-color);
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.details-customer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details-customer table thead td {
+    font-weight: 600;
+}
+
+.details-customer .customers table tr {
+    color: var(--black-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details-customer .customers table tr:last-child {
+    border-bottom: none;
+}
+
+.details-customer .customers table tbody tr:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.details-customer .customers table tr td {
+    padding: 10px;
+}
+
+.details-customer .customers table tr td:last-child {
+    text-align: end;
+}
+
+.details-customer .customers table tr td:nth-child(2),
+.details-customer .customers table tr td:nth-child(3),
+.details-customer .customers table tr td:nth-child(4),
+.details-customer .customers table tr td:nth-child(5),
+.details-customer .customers table tr td:nth-child(6),
+.details-customer .customers table tr td:nth-child(7) {
+    text-align: center;
+}

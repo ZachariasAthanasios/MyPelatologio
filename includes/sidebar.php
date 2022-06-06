@@ -18,7 +18,7 @@
 
         <!-- Admins -->
         <li>
-            <a href="#">
+            <a href="http://localhost/MyPelatologio/admin.php">
                 <span class="icon"> <i class="fa-solid fa-hammer"></i> </span>
                 <span class="title">Admins</span>
             </a>
@@ -26,7 +26,7 @@
 
         <!-- Customers -->
         <li>
-            <a href="#">
+            <a href="http://localhost/MyPelatologio/customer.php">
                 <span class="icon"> <i class="fa-solid fa-user"></i> </span>
                 <span class="title">Customers</span>
             </a>
@@ -34,7 +34,7 @@
 
         <!-- Settings -->
         <li>
-            <a href="#">
+            <a href="http://localhost/MyPelatologio/settings.php">
                 <span class="icon"> <i class="fa-solid fa-gear"></i> </span>
                 <span class="title">Settings</span>
             </a>

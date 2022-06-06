@@ -318,6 +318,8 @@
     white-space: nowrap;
 }
 
+
+/* Copyright */
 .copyright {
     display: flex;
     justify-content: center;
