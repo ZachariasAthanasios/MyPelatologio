@@ -58,11 +58,11 @@
             <!-- Customer Detail List -->
             <div class="details-customer">
 
-                <!-- Recent Customers Detail List -->
+                <!-- Customers Detail List -->
                 <div class="customers" id="customers">
                     <div class="cardHeader">
                         <h2>Customers</h2>
-                        <a href="#" class="btn-view_all">Create Customer</a>
+                        <a href="./createCustomer.php" class="btn-view_all">Create Customer</a>
                     </div>
                     <table>
                         <thead>

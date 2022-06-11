@@ -58,11 +58,11 @@
             <!-- Admins Detail List -->
             <div class="details-admin">
 
-                <!-- Recent Customers Detail List -->
+                <!-- Admins Detail List -->
                 <div class="admins" id="admins">
                     <div class="cardHeader">
                         <h2>Admins</h2>
-                        <a href="#" class="btn-view_all">Create Admin</a>
+                        <a href="./createAdmin.php" class="btn-view_all">Create Admin</a>
                     </div>
                     <table>
                         <thead>
