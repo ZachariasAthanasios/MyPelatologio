@@ -110,7 +110,7 @@
                 <div class="recentCustomers" id="recentCustomers">
                     <div class="cardHeader">
                         <h2>Recent Customers</h2>
-                        <a href="#" class="btn-view_all">View All</a>
+                        <a href="./customer.php" class="btn-view_all">View All</a>
                     </div>
                     <table>
                         <thead>
