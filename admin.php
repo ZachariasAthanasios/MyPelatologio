@@ -62,7 +62,7 @@
                 <div class="admins" id="admins">
                     <div class="cardHeader">
                         <h2>Admins</h2>
-                        <a href="./createAdmin.php" class="btn-view_all">Create Admin</a>
+                        <a href="./newAdmin.php" class="btn-view_all">New Admin</a>
                     </div>
                     <table>
                         <thead>

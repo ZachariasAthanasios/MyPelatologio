@@ -1,0 +1,62 @@
+.details-admin .admins form {
+    width: 100%;
+}
+
+
+.details-admin .admins .input_field {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.details-admin .admins .input_field.first-name {
+    margin-top: 60px;
+}
+
+.details-admin .admins .input_field label {
+    width: 200px;
+    color: var(--black-color);
+    margin-left: 50px;
+    font-size: 18px;
+}
+
+.details-admin .admins .input_field .input {
+    width: 80%;
+    outline: none;
+    border: 1px solid var(--black-color);
+    font-size: 18px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.details-admin .admins .input-field {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.details-admin .admins .input_field select {
+    padding: 5px 26px;
+}
+
+.details-admin .admins .input-field .newAdmin-btn {
+    align-items: center;
+	width: 30%;
+	height: 3.125rem;
+	border-radius: 1.563rem;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #6C63FF, #7C80FF, #6C63FF);
+	background-size: 200%;
+	font-size: var(--fs-12);
+	color: var(--white-color);
+	font-family: var(--font-family);
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.details-admin .admins .input-field .newAdmin-btn:hover{
+	background-position: right;
+}

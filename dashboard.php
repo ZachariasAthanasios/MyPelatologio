@@ -62,7 +62,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">1.504</div>
-                        <div class="cardName">Daily Views</div>
+                        <div class="cardName">Admins</div>
                     </div>
                     <div class="iconBox">
                         <i class="fa-solid fa-eye"></i>
@@ -73,7 +73,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">1.504</div>
-                        <div class="cardName">Daily Views</div>
+                        <div class="cardName">Customers</div>
                     </div>
                     <div class="iconBox">
                         <i class="fa-solid fa-eye"></i>
@@ -84,7 +84,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">1.504</div>
-                        <div class="cardName">Daily Views</div>
+                        <div class="cardName">Orders</div>
                     </div>
                     <div class="iconBox">
                         <i class="fa-solid fa-eye"></i>
@@ -94,8 +94,8 @@
                 <!-- Card #4 -->
                 <div class="card">
                     <div>
-                        <div class="numbers">1.504</div>
-                        <div class="cardName">Daily Views</div>
+                        <div class="numbers">1.504 €</div>
+                        <div class="cardName">Profit</div>
                     </div>
                     <div class="iconBox">
                         <i class="fa-solid fa-eye"></i>

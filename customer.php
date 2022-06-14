@@ -62,7 +62,7 @@
                 <div class="customers" id="customers">
                     <div class="cardHeader">
                         <h2>Customers</h2>
-                        <a href="./createCustomer.php" class="btn-view_all">Create Customer</a>
+                        <a href="./newCustomer.php" class="btn-view_all">New Customer</a>
                     </div>
                     <table>
                         <thead>

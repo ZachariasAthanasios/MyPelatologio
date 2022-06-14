@@ -24,3 +24,19 @@
     /* Customer Page */
     @import url(./layout/customer/_customer.css);
     @import url(./layout/customer/_responsive.css);
+
+    /* New Admin Page */
+    @import url(./layout/newAdmin/_newAdmin.css);
+    @import url(./layout/newAdmin/_responsive.css);
+
+    /* New Customer Page */
+    @import url(./layout/newCustomer/_newCustomer.css);
+    @import url(./layout/newCustomer/_responsive.css);
+
+    /* Orders Page */
+
+    /* New Order Page */
+
+    /* Search Page */
+
+    /* Settings Page */
