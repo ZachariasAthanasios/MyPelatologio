@@ -26,5 +26,5 @@ CREATE TABLE customers (
   customersAddress varchar(50) NOT NULL,
   customersLevel varchar(50) NOT NULL,
   customersOrders varchar(50) NOT NULL,
-  adminsCreate_at datetime NOT NULL DEFAULT current_timestamp()
+  customersCreate_at datetime NOT NULL DEFAULT current_timestamp()
 )
