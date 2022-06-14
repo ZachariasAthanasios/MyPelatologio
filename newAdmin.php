@@ -64,42 +64,42 @@
                         <h2>New Admin</h2>
                     </div>
 
-                    <form action="#" method="POST">
+                    <form action="./database/newAdmin.db.php" method="POST">
 
                         <!-- First Name -->
                         <div class="input_field first-name">
                             <label for="first-name-field">First Name</label>
-                            <input type="text" class="input" id="first-name-field">
+                            <input type="text" class="input" name="first-name" id="first-name-field">
                         </div>
 
                         <!-- Last Name -->
                         <div class="input_field">
                             <label for="last-name-field">Last Name</label>
-                            <input type="text" class="input" id="last-name-field">
+                            <input type="text" class="input" name="last-name" id="last-name-field">
                         </div>
 
                         <!-- Email Name -->
                         <div class="input_field">
                             <label for="email-field">Email</label>
-                            <input type="email" class="input" id="email-field">
+                            <input type="email" class="input" name="email" id="email-field">
                         </div>
 
                         <!-- Phone -->
                         <div class="input_field">
                             <label for="phone-field">Phone</label>
-                            <input type="number" class="input" id="phone-field">
+                            <input type="number" class="input" name="phone" id="phone-field">
                         </div>
 
                         <!-- Username -->
                         <div class="input_field">
                             <label for="username-field">Username</label>
-                            <input type="text" class="input" id="username-field">
+                            <input type="text" class="input" name="username" id="username-field">
                         </div>
 
                         <!-- Password -->
                         <div class="input_field">
                             <label for="password-field">Password</label>
-                            <input type="password" class="input" id="password-field">
+                            <input type="password" class="input" name="password" id="password-field">
                         </div>
 
                         <!-- Admin Role -->
@@ -114,7 +114,7 @@
 
                         <!-- Submit Button -->
                         <div class="input-field">
-                            <input type="submit" value="Create Admin" class="newAdmin-btn">
+                            <input type="submit" value="Create Admin" name="submit" class="newAdmin-btn">
                         </div>
                     </form>
                 </div>

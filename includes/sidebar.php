@@ -32,6 +32,14 @@
             </a>
         </li>
 
+        <!-- Orders -->
+        <li>
+            <a href="http://localhost/MyPelatologio/order.php">
+                <span class="icon"> <i class="fa-solid fa-receipt"></i> </span>
+                <span class="title">Orders</span>
+            </a>
+        </li>
+
         <!-- Settings -->
         <li>
             <a href="http://localhost/MyPelatologio/settings.php">

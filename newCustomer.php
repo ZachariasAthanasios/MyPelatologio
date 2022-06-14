@@ -64,48 +64,48 @@
                         <h2>New Customer</h2>
                     </div>
 
-                    <form action="#" method="POST">
+                    <form action="./database/newCustomer.db.php" method="POST">
 
                         <!-- First Name -->
                         <div class="input_field first-name">
                             <label for="first-name-field">First Name</label>
-                            <input type="text" class="input" id="first-name-field">
+                            <input type="text" name="cfirst-name" class="input" id="first-name-field">
                         </div>
 
                         <!-- Last Name -->
                         <div class="input_field">
                             <label for="last-name-field">Last Name</label>
-                            <input type="text" class="input" id="last-name-field">
+                            <input type="text" name="clast-name" class="input" id="last-name-field">
                         </div>
 
                         <!-- Email Name -->
                         <div class="input_field">
                             <label for="email-field">Email</label>
-                            <input type="email" class="input" id="email-field">
+                            <input type="email" name="cemail" class="input" id="email-field">
                         </div>
 
                         <!-- Phone -->
                         <div class="input_field">
                             <label for="phone-field">Phone</label>
-                            <input type="number" class="input" id="phone-field">
+                            <input type="number" name="cphone" class="input" id="phone-field">
                         </div>
 
                         <!-- Company -->
                         <div class="input_field">
                             <label for="company-field">Company</label>
-                            <input type="text" class="input" id="company-field">
+                            <input type="text" name="ccompany" class="input" id="company-field">
                         </div>
 
                         <!-- Address -->
                         <div class="input_field">
                             <label for="address-field">Address</label>
-                            <input type="text" class="input" id="address-field">
+                            <input type="text" name="caddress" class="input" id="address-field">
                         </div>
 
                         <!-- Customer Level -->
                         <div class="input_field">
                             <label for="admin-roles">Level</label>
-                            <select name="admin_roles" id="admin-roles">
+                            <select name="customer_roles" id="admin-roles">
                                 <option value="NewCustomer">New Customer</option>
                                 <option value="GoodCustomer">Good Customer</option>
                                 <option value="PerfectCustomer">Perfect Customer</option>
