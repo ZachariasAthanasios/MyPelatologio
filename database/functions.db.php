@@ -137,3 +137,43 @@ function createCustomer($conn, $cfname, $clname, $cemail, $cphone, $ccompany, $c
     header("Location: ../customer.php?error=none");
     exit();
 }
+
+
+// Functions For Orders
+
+
+function emptyInputCreateOrder($service, $cname, $cemail, $order_status, $receipt) {
+    $result = null;
+    if (empty($service) || empty($cname) || empty($cemail) || empty($order_status) || empty($receipt)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function invalidEmailCustomerOrder($cemail) {
+    $result = null;
+    if (!filter_var($cemail, FILTER_VALIDATE_EMAIL)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function createOrder($conn, $service, $cname, $cemail, $order_status, $receipt) {
+    $sql = "INSERT INTO orders (ordersService, ordersNameCustomer, ordersEmailCustomer, ordersStatus, ordersReceipt) VALUES (?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location: ../newOrder.php?error=stmtfailed2");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, 'sssss', $service, $cname, $cemail, $order_status, $receipt);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("Location: ../order.php?error=none");
+    exit();
+}

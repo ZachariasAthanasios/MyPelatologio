@@ -28,3 +28,12 @@ CREATE TABLE customers (
   customersOrders varchar(50) NOT NULL,
   customersCreate_at datetime NOT NULL DEFAULT current_timestamp()
 )
+
+CREATE TABLE orders (
+	ordersID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	ordersService VARCHAR(50) NOT NULL,
+	ordersNameCustomer VARCHAR(50) NOT NULL,
+	ordersEmailCustomer VARCHAR(50) NOT NULL,
+	ordersStatus VARCHAR(50) NOT NULL,
+	ordersCreate_at datetime NOT NULL DEFAULT current_timestamp()
+);

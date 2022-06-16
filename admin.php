@@ -58,6 +58,13 @@
             <!-- Admins Detail List -->
             <div class="details-admin">
 
+            
+                <?php 
+                    $sql = "SELECT * FROM admins;";
+                    $result = mysqli_query($conn, $sql);
+                    $resultData = mysqli_num_rows($result);
+                ?>
+
                 <!-- Admins Detail List -->
                 <div class="admins" id="admins">
                     <div class="cardHeader">
@@ -76,50 +83,49 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>zachariasathanasioss@gmail.com</td>
-                                <td>6981234567</td>
-                                <td>Sugarman</td>
-                                <td class="admin-role">Super Admin</td>
-                                <td>06/06/2022</span> </td>
-                            </tr>
+
+                            <?php
+                                if ($resultData > 0) {
+                                    while ($row = mysqli_fetch_array($result)) {
+                            ?>
 
                             <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td> <span class="status ok">Ok Customer</span> </td>
+                                <td>
+                                    <?php
+                                        echo $row['adminsFname'] . " " . $row['adminsLname'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['adminsEmail'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['adminsPhone'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['adminsUsername'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['adminsRole'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['adminsCreate_at'];
+                                    ?>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td> <span class="status ok">Ok Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td> <span class="status ok">Ok Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td> <span class="status ok">Ok Customer</span> </td>
-                            </tr>
+                            <?php
+                                    } // While Close
+                                } //If Close
+                            ?>
                         </tbody>
                     </table>
                 </div>

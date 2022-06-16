@@ -61,50 +61,92 @@
                 <!-- Card #1 -->
                 <div class="card">
                     <div>
-                        <div class="numbers">1.504</div>
+                        <div class="numbers">
+                            <?php 
+                                $sql = "SELECT * FROM admins";
+                                if ($result = mysqli_query($conn, $sql)) {
+                                    $rowCount = mysqli_num_rows($result);
+                                    echo $rowCount;
+                                }
+                            ?>
+                        </div>
                         <div class="cardName">Admins</div>
                     </div>
                     <div class="iconBox">
-                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-hammer"></i>
                     </div>
                 </div>
 
                 <!-- Card #2 -->
                 <div class="card">
                     <div>
-                        <div class="numbers">1.504</div>
+                        <div class="numbers">
+                            <?php 
+                                $sql = "SELECT * FROM customers";
+                                if ($result = mysqli_query($conn, $sql)) {
+                                    $rowCount = mysqli_num_rows($result);
+                                    echo $rowCount;
+                                }
+                            ?>
+                        </div>
                         <div class="cardName">Customers</div>
                     </div>
                     <div class="iconBox">
-                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-user"></i>
                     </div>
                 </div>
 
                 <!-- Card #3 -->
                 <div class="card">
                     <div>
-                        <div class="numbers">1.504</div>
+                        <div class="numbers">
+                            <?php 
+                                $sql = "SELECT * FROM orders";
+                                if ($result = mysqli_query($conn, $sql)) {
+                                    $rowCount = mysqli_num_rows($result);
+                                    echo $rowCount;
+                                }
+                            ?>
+                        </div>
                         <div class="cardName">Orders</div>
                     </div>
                     <div class="iconBox">
-                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-receipt"></i>
                     </div>
                 </div>
 
                 <!-- Card #4 -->
                 <div class="card">
                     <div>
-                        <div class="numbers">1.504 €</div>
+                        <div class="numbers">
+                            <?php 
+                                $sql = "SELECT sum(ordersReceipt) FROM orders";
+                                $q = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_array($q);
+                                
+                                if ($row[0] != 0) {
+                                    echo $row[0];
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
+                        </div>
                         <div class="cardName">Profit</div>
                     </div>
                     <div class="iconBox">
-                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-euro-sign"></i>
                     </div>
                 </div>
             </div>
 
             
             <div class="details">
+
+                <?php 
+                    $sql = "SELECT * FROM customers limit 10;";
+                    $result = mysqli_query($conn, $sql);
+                    $resultData = mysqli_num_rows($result);
+                ?>
 
                 <!-- Recent Customers Detail List -->
                 <div class="recentCustomers" id="recentCustomers">
@@ -117,80 +159,53 @@
                             <tr>
                                 <td>Name</td>
                                 <td>Company</td>
-                                <td>Orders</td>
+                                <td>Phone</td>
                                 <td>Status</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status ok">Ok Customer</span> </td>
-                            </tr>
+
+                            <?php
+                                if ($resultData > 0) {
+                                    while ($row = mysqli_fetch_array($result)) {
+                            ?>
 
                             <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status good">Good Customer</span> </td>
+                                <td>
+                                    <?php
+                                        echo $row['customersFname'] . " " . $row['customersLname'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                        echo $row['customersCompany'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                        echo $row['customersPhone'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                        if ($row['customersLevel'] == "NewCustomer") {
+                                            echo "<span class='status new'>New Customer</span>";
+                                        }
+                                        else if ($row['customersLevel'] == "GoodCustomer") {
+                                            echo "<span class='status good'>Good Customer</span>";
+                                        }
+                                        else if ($row['customersLevel'] == "PerfectCustomer") {
+                                            echo "<span class='status ok'>Perfect Customer</span>";
+                                        }
+                                    ?>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status good">Good Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status good">Good Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status good">Good Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status good">Good Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status new">New Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status new">New Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status new">New Customer</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos</td>
-                                <td>Airbyte.gr</td>
-                                <td>1</td>
-                                <td> <span class="status new">New Customer</span> </td>
-                            </tr>
+                            <?php
+                                    } // While Close
+                                } //If Close
+                            ?>
+                                
                         </tbody>
                     </table>
                 </div>
@@ -200,51 +215,58 @@
                     <div class="cardHeader">
                         <h2>Recent Orders</h2>
                     </div>
+
+                    <?php 
+                        $sql = "SELECT * FROM orders limit 5;";
+                        $result = mysqli_query($conn, $sql);
+                        $resultData = mysqli_num_rows($result);
+                    ?>
+
                     <table>
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-laptop-code"></i>
-                                <h4>Digital Marketing</h4>
-                                <span>Zacharias Thanos</span>
-                            </td>
-                            <td> <span class="status delivered">Delivered</span> </td>
-                        </tr>
+
+                        <?php
+                            if ($resultData > 0) {
+                                while ($row = mysqli_fetch_array($result)) {
+                        ?>
 
                         <tr>
                             <td>
                                 <i class="fa-solid fa-laptop-code"></i>
-                                <h4>Digital Marketing</h4>
-                                <span>Zacharias Thanos</span>
+                                <h4>
+                                    <?php
+                                        echo $row['ordersService'];
+                                    ?>
+                                </h4>
+                                <span>
+                                    <?php
+                                        echo $row['ordersNameCustomer'];
+                                    ?>
+                                </span>
                             </td>
-                            <td> <span class="status pending">Pending</span> </td>
-                        </tr>
+                            <td> 
+                                <?php 
+                                    if ($row['ordersStatus'] == "Pending") {
+                                        echo "<span class='status pending'>Pending</span>";
+                                    }
+                                    else if ($row['ordersStatus'] == "Delivered") {
+                                        echo "<span class='status delivered'>Delivered</span>";
+                                    }
+                                    else if ($row['ordersStatus'] == "Canceling") {
+                                        echo "<span class='status canceling'>Canceling</span>";
+                                    }
+                                    else if ($row['ordersStatus'] == "InProgress") {
+                                        echo "<span class='status inprogress'>In Progress</span>";
+                                    }
+                                ?>
+                            </td>
 
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-laptop-code"></i>
-                                <h4>Digital Marketing</h4>
-                                <span>Zacharias Thanos</span>
-                            </td>
-                            <td> <span class="status canceling">Canceling</span> </td>
                         </tr>
+                            
+                        <?php
+                                } // While Close
+                            } //If Close
+                        ?>
 
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-laptop-code"></i>
-                                <h4>Digital Marketing</h4>
-                                <span>Zacharias Thanos</span>
-                            </td>
-                            <td> <span class="status inprogress">In Progress</span> </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-laptop-code"></i>
-                                <h4>Digital Marketing</h4>
-                                <span>Zacharias Thanos</span>
-                            </td>
-                            <td> <span class="status inprogress">In Progress</span> </td>
-                        </tr>
                     </table>
                 </div>
             </div>

@@ -58,6 +58,12 @@
             <!-- Orders Detail List -->
             <div class="details-customer">
 
+                <?php 
+                    $sql = "SELECT * FROM orders;";
+                    $result = mysqli_query($conn, $sql);
+                    $resultData = mysqli_num_rows($result);
+                ?>
+
                 <div class="customers" id="customers">
                     <div class="cardHeader">
                         <h2>Orders</h2>
@@ -72,17 +78,65 @@
                                 <td>Name</td>
                                 <td>Email</td>
                                 <td>Status</td>
+                                <td>Receipt</td>
                                 <td>Create At</td>
                             </tr>
                         </thead>
                         <tbody>
+
+                            <?php
+                                if ($resultData > 0) {
+                                    while ($row = mysqli_fetch_array($result)) {
+                            ?>
+
                             <tr>
-                                <td>Eshop</td>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>zachariasathanasioss@gmail.com</td>
-                                <td class="status pending">Pending</td>
-                                <td>06/06/2022</span> </td>
+                                <td>
+                                    <?php
+                                        echo $row['ordersService'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['ordersNameCustomer'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['ordersEmailCustomer'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                        if ($row['ordersStatus'] == "Pending") {
+                                            echo "<span class='status pending'>Pending</span>";
+                                        }
+                                        else if ($row['ordersStatus'] == "Delivered") {
+                                            echo "<span class='status delivered'>Delivered</span>";
+                                        }
+                                        else if ($row['ordersStatus'] == "Canceling") {
+                                            echo "<span class='status canceling'>Canceling</span>";
+                                        }
+                                        else if ($row['ordersStatus'] == "InProgress") {
+                                            echo "<span class='status inprogress'>In Progress</span>";
+                                        }
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['ordersReceipt'] . "€";
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['ordersCreate_at'];
+                                    ?>
+                                </td>
                             </tr>
+
+                            <?php
+                                    } // While Close
+                                } //If Close
+                            ?>
                         </tbody>
                     </table>
 

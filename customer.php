@@ -58,6 +58,12 @@
             <!-- Customer Detail List -->
             <div class="details-customer">
 
+                <?php 
+                    $sql = "SELECT * FROM customers;";
+                    $result = mysqli_query($conn, $sql);
+                    $resultData = mysqli_num_rows($result);
+                ?>
+
                 <!-- Customers Detail List -->
                 <div class="customers" id="customers">
                     <div class="cardHeader">
@@ -73,54 +79,66 @@
                                 <td>Company</td>
                                 <td>Address</td>
                                 <td>Level</td>
-                                <td>Orders</td>
                                 <td>Create At</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>zachariasathanasioss@gmail.com</td>
-                                <td>6981234567</td>
-                                <td>Airbyte EΠΕ</td>
-                                <td>Εγνατία 18</td>
-                                <td class="customer-level">Ok Customer</td>
-                                <td>5</td>
-                                <td>06/06/2022</span> </td>
-                            </tr>
+
+                            <?php
+                                if ($resultData > 0) {
+                                    while ($row = mysqli_fetch_array($result)) {
+                            ?>
 
                             <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>zachariasathanasioss@gmail.com</td>
-                                <td>6981234567</td>
-                                <td>Airbyte EΠΕ</td>
-                                <td>Εγνατία 18</td>
-                                <td class="customer-level">Ok Customer</td>
-                                <td>5</td>
-                                <td>06/06/2022</span> </td>
+                                <td>
+                                    <?php
+                                        echo $row['customersFname'] . " " . $row['customersLname'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['customersEmail'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['customersPhone'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['customersCompany'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['customersAddress'];
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                        if ($row['customersLevel'] == "NewCustomer") {
+                                            echo "<span class='status new'>New Customer</span>";
+                                        }
+                                        else if ($row['customersLevel'] == "GoodCustomer") {
+                                            echo "<span class='status good'>Good Customer</span>";
+                                        }
+                                        else if ($row['customersLevel'] == "PerfectCustomer") {
+                                            echo "<span class='status ok'>Perfect Customer</span>";
+                                        }
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo $row['customersCreate_at'];
+                                    ?>
+                                </td>
                             </tr>
 
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>zachariasathanasioss@gmail.com</td>
-                                <td>6981234567</td>
-                                <td>Airbyte EΠΕ</td>
-                                <td>Εγνατία 18</td>
-                                <td class="customer-level">Ok Customer</td>
-                                <td>5</td>
-                                <td>06/06/2022</span> </td>
-                            </tr>
-
-                            <tr>
-                                <td>Zacharias Thanos ldkglkdghkladhgkldhglkhlk</td>
-                                <td>zachariasathanasioss@gmail.com</td>
-                                <td>6981234567</td>
-                                <td>Airbyte EΠΕ</td>
-                                <td>Εγνατία 18</td>
-                                <td class="customer-level">Ok Customer</td>
-                                <td>5</td>
-                                <td>06/06/2022</span> </td>
-                            </tr>
+                            <?php
+                                    } // While Close
+                                } //If Close
+                            ?>
                         </tbody>
                     </table>
                 </div>
