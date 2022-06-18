@@ -20,6 +20,7 @@
 </head>
 <body>
 
+    <!-- Only anyone who has logged in can access the page. -->
     <?php
         include_once "database/dbh.db.php";
         if (!isset($_SESSION['adminsUsername'])) {
@@ -116,6 +117,9 @@
                         <div class="input-field">
                             <input type="submit" value="Create Admin" name="submit" class="newAdmin-btn">
                         </div>
+
+                        <!-- Error Messages -->
+				        <?php include ('includes/createAdminErrorMessages.inc.php'); ?>
                     </form>
                 </div>
 

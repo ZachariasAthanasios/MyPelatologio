@@ -20,6 +20,7 @@
 </head>
 <body>
 
+    <!-- Only anyone who has logged in can access the page. -->
     <?php
         include_once "database/dbh.db.php";
         if (!isset($_SESSION['adminsUsername'])) {
@@ -56,15 +57,16 @@
             </div>
 
             <!-- Orders Detail List -->
-            <div class="details-customer">
+            <div class="details-order">
 
+                <!-- SQL Querry for Order view. -->
                 <?php 
                     $sql = "SELECT * FROM orders;";
                     $result = mysqli_query($conn, $sql);
                     $resultData = mysqli_num_rows($result);
                 ?>
 
-                <div class="customers" id="customers">
+                <div class="orders" id="orders">
                     <div class="cardHeader">
                         <h2>Orders</h2>
                         <a href="newOrder.php" class="btn-view_all">New Order</a>
@@ -79,11 +81,13 @@
                                 <td>Email</td>
                                 <td>Status</td>
                                 <td>Receipt</td>
+                                <td><i class="fa-solid fa-pen"> / <i class="fa-solid fa-trash-can"></i></td>
                                 <td>Create At</td>
                             </tr>
                         </thead>
                         <tbody>
 
+                            <!-- If there is data print the information per row -->
                             <?php
                                 if ($resultData > 0) {
                                     while ($row = mysqli_fetch_array($result)) {
@@ -124,6 +128,13 @@
                                 <td>
                                     <?php
                                         echo $row['ordersReceipt'] . "€";
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo '<a href="./database/updateOrder.db.php?updateid=' . $row['ordersID'] . '"><i class="fa-solid fa-pen"></i></a>
+                                             / 
+                                             <a href="./database/deleteOrder.db.php?deleteid=' . $row['ordersID'] . '"><i class="fa-solid fa-trash-can"></i></a>'
                                     ?>
                                 </td>
                                 <td>

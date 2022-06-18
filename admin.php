@@ -20,12 +20,14 @@
 </head>
 <body>
 
+    <!-- Only anyone who has logged in can access the page. -->
     <?php
         include_once "database/dbh.db.php";
         if (!isset($_SESSION['adminsUsername'])) {
             header("Location: http://localhost/MyPelatologio/index.php?error=YouNeedToLoginFirst");
         }
     ?>
+
 
     <div class="container-dashboard">
 
@@ -58,7 +60,7 @@
             <!-- Admins Detail List -->
             <div class="details-admin">
 
-            
+                <!-- SQL Querry for Admin view. -->
                 <?php 
                     $sql = "SELECT * FROM admins;";
                     $result = mysqli_query($conn, $sql);
@@ -79,47 +81,56 @@
                                 <td>Phone</td>
                                 <td>Username</td>
                                 <td>Role</td>
+                                <td><i class="fa-solid fa-pen"> / <i class="fa-solid fa-trash-can"></i></td>
                                 <td>Create At</td>
                             </tr>
                         </thead>
                         <tbody>
-
+                            <!-- If there is data print the information per row -->
                             <?php
                                 if ($resultData > 0) {
                                     while ($row = mysqli_fetch_array($result)) {
                             ?>
 
+
                             <tr>
-                                <td>
-                                    <?php
-                                        echo $row['adminsFname'] . " " . $row['adminsLname'];
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                        echo $row['adminsEmail'];
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                        echo $row['adminsPhone'];
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                        echo $row['adminsUsername'];
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                        echo $row['adminsRole'];
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                        echo $row['adminsCreate_at'];
-                                    ?>
-                                </td>
+                                    <td>
+                                        <?php
+                                            echo $row['adminsFname'] . " " . $row['adminsLname'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo $row['adminsEmail'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo $row['adminsPhone'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo $row['adminsUsername'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo $row['adminsRole'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo '<a href="./database/updateAdmin.db.php?updateid=' . $row['adminsID'] . '"><i class="fa-solid fa-pen"></i></a>
+                                                 / 
+                                                 <a href="./database/deleteAdmin.db.php?deleteid=' . $row['adminsID'] . '"><i class="fa-solid fa-trash-can"></i></a>'
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo $row['adminsCreate_at'];
+                                        ?>
+                                    </td>
                             </tr>
 
                             <?php

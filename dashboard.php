@@ -20,6 +20,7 @@
 </head>
 <body>
 
+    <!-- Only anyone who has logged in can access the page. -->
     <?php
         include_once "database/dbh.db.php";
         if (!isset($_SESSION['adminsUsername'])) {
@@ -142,6 +143,7 @@
             
             <div class="details">
 
+                <!-- SQL Querry for Recent Customer view. -->
                 <?php 
                     $sql = "SELECT * FROM customers limit 10;";
                     $result = mysqli_query($conn, $sql);
@@ -165,6 +167,7 @@
                         </thead>
                         <tbody>
 
+                            <!-- If there is data print the information per row -->
                             <?php
                                 if ($resultData > 0) {
                                     while ($row = mysqli_fetch_array($result)) {
@@ -216,6 +219,7 @@
                         <h2>Recent Orders</h2>
                     </div>
 
+                    <!-- SQL Querry for Recent Order view. -->
                     <?php 
                         $sql = "SELECT * FROM orders limit 5;";
                         $result = mysqli_query($conn, $sql);
@@ -224,6 +228,7 @@
 
                     <table>
 
+                        <!-- If there is data print the information per row -->       
                         <?php
                             if ($resultData > 0) {
                                 while ($row = mysqli_fetch_array($result)) {

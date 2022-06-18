@@ -1,0 +1,65 @@
+/* Details List */
+.details-order {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+}
+
+.details-order .orders {
+    position: relative;
+    display: grid;
+    min-height: 350px;
+    background-color: var(--white-color);
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.details-order table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details-order table thead td {
+    font-weight: 600;
+}
+
+.details-order .orders table tr {
+    color: var(--black-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details-order .orders table tr:last-child {
+    border-bottom: none;
+}
+
+.details-order .orders table tbody tr:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.details-order .orders table tr td {
+    padding: 10px;
+}
+
+.details-order .orders table tr td:last-child {
+    text-align: end;
+}
+
+.details-order .orders table tr td:nth-child(2),
+.details-order .orders table tr td:nth-child(3),
+.details-order .orders table tr td:nth-child(4),
+.details-order .orders table tr td:nth-child(5),
+.details-order .orders table tr td:nth-child(6) {
+    text-align: center;
+}
+
+.details-order .orders table tbody tr:hover .fa-pen,
+.details-order .orders table tbody tr:hover .fa-trash-can {
+    color: var(--white-color);
+}

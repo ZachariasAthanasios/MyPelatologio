@@ -59,3 +59,14 @@
 .details-customer .customers table tr td:nth-child(7) {
     text-align: center;
 }
+
+.fa-pen,
+.fa-trash-can {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.details-customer .customers table tbody tr:hover .fa-pen,
+.details-customer .customers table tbody tr:hover .fa-trash-can {
+    color: var(--white-color);
+}

@@ -12,27 +12,27 @@ if (isset($_POST["submit"])) {
     require_once "dbh.db.php";
     require_once "functions.db.php";
 
-    // Error Handlers
+    // Error Handlers.
 
-    // Ελέγχει εάν ο χρήστη έχει συμπληρώσει όλα τα πεδία. 
+    // Checks if the user has filled in all the fields. 
     if (emptyInputCreateCustomer($cfname, $clname, $cemail, $cphone, $ccompany, $caddress, $croles) !== false) {
         header ("Location: ../newCustomer.php?error=emptyinput");
         exit();
     }
 
-    // Ελέγχει εάν ο χρήστη έχει συμπληρώσει ένα σωστό email
+    // Checks if the user has filled in a valid email.
     if (invalidEmailCustomer($cemail) !== false) {
         header ("Location: ../newCustomer.php?error=invalidemail");
         exit();
     }
 
-    // Ελέγχει εάν υπάρχει ήδη ο πελάτης στην βάση δεδομένων. Ελέγχει για email.
+    // Checks if the client already exists in the database. Checks for email.
     if (customerExists($conn, $cemail) !== false) {
         header ("Location: ../newCustomer.php?error=customerexists");
         exit();
     }
 
-    // Δημιουργεί τον πελάτη στην βάση δεδομένων
+    // Creates the client in the database.
     createCustomer($conn, $cfname, $clname, $cemail, $cphone, $ccompany, $caddress, $croles);
 
 } else {

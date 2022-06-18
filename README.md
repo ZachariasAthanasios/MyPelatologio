@@ -25,7 +25,6 @@ CREATE TABLE customers (
   customersCompany varchar(50) NOT NULL,
   customersAddress varchar(50) NOT NULL,
   customersLevel varchar(50) NOT NULL,
-  customersOrders varchar(50) NOT NULL,
   customersCreate_at datetime NOT NULL DEFAULT current_timestamp()
 )
 
@@ -36,4 +35,10 @@ CREATE TABLE orders (
 	ordersEmailCustomer VARCHAR(50) NOT NULL,
 	ordersStatus VARCHAR(50) NOT NULL,
 	ordersCreate_at datetime NOT NULL DEFAULT current_timestamp()
+);
+
+CREATE TABLE resetPasswords (
+	resetPasswordsID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	resetPasswordsCode VARCHAR(255) NOT NULL,
+	resetPasswordsEmail VARCHAR(50) NOT NULL
 );

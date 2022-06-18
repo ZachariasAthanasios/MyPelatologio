@@ -25,15 +25,18 @@
     @import url(./layout/customer/_customer.css);
     @import url(./layout/customer/_responsive.css);
 
+    /* Orders Page */
+    @import url(./layout/order/_order.css);
+    @import url(./layout/order/_responsive.css);
+
     /* New Admin Page */
     @import url(./layout/newAdmin/_newAdmin.css);
 
     /* New Customer Page */
     @import url(./layout/newCustomer/_newCustomer.css);
 
-    /* Orders Page */
-
     /* New Order Page */
+    @import url(./layout/newOrder/_newOrder.css);
 
     /* Search Page */
 

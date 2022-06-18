@@ -20,6 +20,7 @@
 </head>
 <body>
 
+    <!-- Only anyone who has logged in can access the page. -->
     <?php
         include_once "database/dbh.db.php";
         if (!isset($_SESSION['adminsUsername'])) {
@@ -58,6 +59,7 @@
             <!-- Customer Detail List -->
             <div class="details-customer">
 
+                <!-- SQL Querry for Customer view. -->
                 <?php 
                     $sql = "SELECT * FROM customers;";
                     $result = mysqli_query($conn, $sql);
@@ -79,11 +81,13 @@
                                 <td>Company</td>
                                 <td>Address</td>
                                 <td>Level</td>
+                                <td><i class="fa-solid fa-pen"> / <i class="fa-solid fa-trash-can"></i></td>
                                 <td>Create At</td>
                             </tr>
                         </thead>
                         <tbody>
 
+                            <!-- If there is data print the information per row -->
                             <?php
                                 if ($resultData > 0) {
                                     while ($row = mysqli_fetch_array($result)) {
@@ -126,6 +130,13 @@
                                         else if ($row['customersLevel'] == "PerfectCustomer") {
                                             echo "<span class='status ok'>Perfect Customer</span>";
                                         }
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php
+                                        echo '<a href="./database/updateCustomer.db.php?updateid=' . $row['customersID'] . '"><i class="fa-solid fa-pen"></i></a>
+                                             / 
+                                             <a href="./database/deleteCustomer.db.php?deleteid=' . $row['customersID'] . '"><i class="fa-solid fa-trash-can"></i></a>'
                                     ?>
                                 </td>
                                 <td>

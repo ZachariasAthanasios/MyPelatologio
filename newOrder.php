@@ -20,6 +20,7 @@
 </head>
 <body>
 
+    <!-- Only anyone who has logged in can access the page. -->
     <?php
         include_once "database/dbh.db.php";
         if (!isset($_SESSION['adminsUsername'])) {
@@ -56,8 +57,8 @@
             </div>
 
             <!-- Create new Admin Form -->
-            <div class="details-customer">
-                <div class="customers" id="customers">
+            <div class="details-order">
+                <div class="orders" id="orders">
 
                     <!-- Form Title -->
                     <div class="cardHeader">
@@ -67,7 +68,7 @@
                     <form action="./database/newOrder.db.php" method="POST">
 
                         <!-- Service -->
-                        <div class="input_field first-name">
+                        <div class="input_field service">
                             <label for="service">Service</label>
                             <select name="service" id="service">
                                 <option value="Eshop">Eshop</option>
@@ -108,8 +109,11 @@
 
                         <!-- Submit Button -->
                         <div class="input-field">
-                            <input type="submit" value="New Order" name="submit" class="newCustomer-btn">
+                            <input type="submit" value="New Order" name="submit" class="newOrder-btn">
                         </div>
+
+                        <!-- Error Messages -->
+				        <?php include ('includes/newOrderErrorMessages.inc.php'); ?>
                     </form>
                 </div>
 

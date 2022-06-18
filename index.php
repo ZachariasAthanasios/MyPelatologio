@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MyCMS">
+    <meta name="description" content="Αn app for Freelancers to track their sales.">
     <meta name="keywords" content="CMS, MyCMS, HTML, CSS, JavaScript, PHP, MySQL">
     <meta name="author" content="Zacharias Athanasios">
 
@@ -53,10 +53,13 @@
             	</div>
 
                 <!--Forgot Password link -->
-            	<a class="forgot-password" href="#">Forgot Password?</a>
+            	<a class="forgot-password" href="./forgotPassword.php">Forgot Password?</a>
 
                 <!-- Login Button -->
             	<input type="submit" name="submit" class="btn" value="Login">
+
+				<!-- Error Messages -->
+				<?php include ('includes/indexErrorMessages.inc.php'); ?>
             </form>
         </div>
     </div>

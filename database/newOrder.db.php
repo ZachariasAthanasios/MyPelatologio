@@ -13,19 +13,19 @@ if (isset($_POST["submit"])) {
 
     // Error Handlers
 
-    // Ελέγχει εάν ο χρήστη έχει συμπληρώσει όλα τα πεδία. 
+    // Checks if the user has filled in all the fields.
     if (emptyInputCreateOrder($service, $cname, $cemail, $order_status, $receipt) !== false) {
         header ("Location: ../newOrder.php?error=emptyinput");
         exit();
     }
 
-    // Ελέγχει εάν ο χρήστη έχει συμπληρώσει ένα σωστό email
+    // Checks if the user has filled in a valid email.
     if (invalidEmailCustomerOrder($cemail) !== false) {
         header ("Location: ../newOrder.php?error=invalidemail");
         exit();
     }
 
-    // Δημιουργεί την Order στην βάση δεδομένων
+    // Creates the Order in the database.
     createOrder($conn, $service, $cname, $cemail, $order_status, $receipt);
 
 } else {

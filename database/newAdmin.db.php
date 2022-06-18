@@ -14,31 +14,31 @@ if (isset($_POST["submit"])) {
 
     // Error Handlers
 
-    // Ελέγχει εάν ο χρήστη έχει συμπληρώσει όλα τα πεδία. 
+    // Checks if the user has filled in all the fields.
     if (emptyInputCreateAdmin($adfname, $adlname, $ademail, $adphone, $username, $password, $adroles) !== false) {
         header ("Location: ../newAdmin.php?error=emptyinput");
         exit();
     }
 
-    // Ελέγχει εάν ο χρήστης έχει συμπληρώσει ένα σωστο username.
+    // Checks if the user has filled in a correct username.
     if (invalidUid($username) !== false) {
         header ("Location: ../newAdmin.php?error=invalidusername");
         exit(); 
     }
 
-    // Ελέγχει εάν ο χρήστη έχει συμπληρώσει ένα σωστό email
+    // Checks if the user has filled in a valid email.
     if (invalidEmail($ademail) !== false) {
         header ("Location: ../newAdmin.php?error=invalidemail");
         exit();
     }
 
-    // Ελέγχει εάν υπάρχει ήδη ο χρήστης στην βάση δεδομένων. Ελέγχει για username και email.
+    // Checks if the user already exists in the database. Checks for username and email.
     if (uidExists($conn, $username, $ademail) !== false) {
         header ("Location: ../newAdmin.php?error=userexists");
         exit();
     }
 
-    // Δημιουργεί τον χρήστη στην βάση δεδομένων
+    // Creates the user in the database.
     createAdmin($conn, $adfname, $adlname, $ademail, $adphone, $username, $password, $adroles);
 
 } else {

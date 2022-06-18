@@ -67,6 +67,21 @@
     text-align: center;
 }
 
+.details-admin .admins table tr td:nth-child(6) {
+    text-align: center;
+}
+
 .admin-role {
     white-space: nowrap;
+}
+
+.fa-pen,
+.fa-trash-can {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.details-admin .admins table tbody tr:hover .fa-pen,
+.details-admin .admins table tbody tr:hover .fa-trash-can  {
+    color: var(--white-color);
 }

@@ -1,5 +1,11 @@
 <?php
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Functions For Admins.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Checks if the user has filled in all the fields.
 function emptyInputCreateAdmin($adfname, $adlname, $ademail, $adphone, $username, $password, $adroles) {
     $result = null;
     if (empty($adfname) || empty($adlname) || empty($ademail) || empty($adphone) || empty($username) || empty($password) || empty($adroles)) {
@@ -10,9 +16,10 @@ function emptyInputCreateAdmin($adfname, $adlname, $ademail, $adphone, $username
     return $result;
 }
 
+// Checks if the user has filled in a correct username.
 function invalidUid($username) {
     $result = null;
-    if (!preg_match("/^[a-zA-Z0-9]*$/", $uid)) {
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         $result = true;
     } else {
         $result = false;
@@ -20,6 +27,7 @@ function invalidUid($username) {
     return $result;
 }
 
+// Checks if the user has filled in a valid email.
 function invalidEmail($ademail) {
     $result = null;
     if (!filter_var($ademail, FILTER_VALIDATE_EMAIL)) {
@@ -30,6 +38,7 @@ function invalidEmail($ademail) {
     return $result;
 }
 
+// Checks if the user already exists in the database. Checks for username and email.
 function uidExists($conn, $username, $ademail) {
     $sql = "SELECT * FROM admins WHERE adminsUsername = ? OR adminsEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
@@ -54,6 +63,7 @@ function uidExists($conn, $username, $ademail) {
     mysqli_stmt_close($stmt);
 }
 
+// Creates the user in the database.
 function createAdmin($conn, $adfname, $adlname, $ademail, $adphone, $username, $password, $adroles) {
     $sql = "INSERT INTO admins (adminsFname, adminsLname, adminsEmail, adminsPhone, adminsUsername, adminsPassword, adminsRole) VALUES (?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
@@ -63,7 +73,7 @@ function createAdmin($conn, $adfname, $adlname, $ademail, $adphone, $username, $
         exit();
     }
 
-    // $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+    //$hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
     mysqli_stmt_bind_param($stmt, 'sssssss', $adfname, $adlname, $ademail, $adphone, $username, $password, $adroles);
     mysqli_stmt_execute($stmt);
@@ -73,11 +83,11 @@ function createAdmin($conn, $adfname, $adlname, $ademail, $adphone, $username, $
 }
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Functions For Customers
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
+// Checks if the user has filled in all the fields.
 function emptyInputCreateCustomer($cfname, $clname, $cemail, $cphone, $ccompany, $caddress, $croles) {
     $result = null;
     if (empty($cfname) || empty($clname) || empty($cemail) || empty($cphone) || empty($ccompany) || empty($caddress) || empty($croles)) {
@@ -88,6 +98,7 @@ function emptyInputCreateCustomer($cfname, $clname, $cemail, $cphone, $ccompany,
     return $result;
 }
 
+// Checks if the user has filled in a valid email.
 function invalidEmailCustomer($cemail) {
     $result = null;
     if (!filter_var($cemail, FILTER_VALIDATE_EMAIL)) {
@@ -98,6 +109,7 @@ function invalidEmailCustomer($cemail) {
     return $result;
 }
 
+// Checks if the client already exists in the database. Checks for email.
 function CustomerExists($conn, $cemail) {
     $sql = "SELECT * FROM customers WHERE customersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
@@ -122,6 +134,7 @@ function CustomerExists($conn, $cemail) {
     mysqli_stmt_close($stmt);
 }
 
+// Creates the client in the database.
 function createCustomer($conn, $cfname, $clname, $cemail, $cphone, $ccompany, $caddress, $croles) {
     $sql = "INSERT INTO customers (customersFname, customersLname, customersEmail, customersPhone, customersCompany, customersAddress, customersLevel) VALUES (?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
@@ -139,9 +152,11 @@ function createCustomer($conn, $cfname, $clname, $cemail, $cphone, $ccompany, $c
 }
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Functions For Orders
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+// Checks if the user has filled in all the fields.
 function emptyInputCreateOrder($service, $cname, $cemail, $order_status, $receipt) {
     $result = null;
     if (empty($service) || empty($cname) || empty($cemail) || empty($order_status) || empty($receipt)) {
@@ -152,6 +167,7 @@ function emptyInputCreateOrder($service, $cname, $cemail, $order_status, $receip
     return $result;
 }
 
+// Checks if the user has filled in a valid email.
 function invalidEmailCustomerOrder($cemail) {
     $result = null;
     if (!filter_var($cemail, FILTER_VALIDATE_EMAIL)) {
@@ -162,6 +178,7 @@ function invalidEmailCustomerOrder($cemail) {
     return $result;
 }
 
+// Creates the Order in the database.
 function createOrder($conn, $service, $cname, $cemail, $order_status, $receipt) {
     $sql = "INSERT INTO orders (ordersService, ordersNameCustomer, ordersEmailCustomer, ordersStatus, ordersReceipt) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
