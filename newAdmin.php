@@ -12,6 +12,9 @@
     <!-- Page Title -->
     <title>Create Admin</title>
 
+    <!-- Σύνδεση Favicon Icon -->
+    <link rel="icon" href="images/coding.jpeg" type="image/x-icon">
+
     <!-- Font-Awesome CDN Link 6.1.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -101,6 +104,10 @@
                         <div class="input_field">
                             <label for="password-field">Password</label>
                             <input type="password" class="input" name="password" id="password-field">
+                            <span onclick="showHide()">
+                                    <img src="images/view.jpeg" alt="Eye" id="hide1">
+                                    <img src="images/hide.jpeg" alt="Hide Eye" id="hide2">
+                            </span>
                         </div>
 
                         <!-- Admin Role -->

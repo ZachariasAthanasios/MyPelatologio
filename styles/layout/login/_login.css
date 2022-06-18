@@ -162,3 +162,18 @@ form{
 .btn:hover{
 	background-position: right;
 }
+
+#hide1,
+#hide2 {
+    position: absolute;
+    top: 67%;
+    right: 25px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#hide1 {
+    display: none;
+}

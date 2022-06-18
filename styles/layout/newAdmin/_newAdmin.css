@@ -60,3 +60,23 @@
 .details-admin .admins .input-field .newAdmin-btn:hover{
 	background-position: right;
 }
+
+.details-admin .admins #hide1,
+.details-admin .admins #hide2 {
+    position: absolute;
+    top: 69.5%;
+    right: 80px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.details-admin .admins #hide1 {
+    display: none;
+}
+
+#message {
+    display: none;
+    text-align: center;
+}
