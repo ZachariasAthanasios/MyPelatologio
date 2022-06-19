@@ -54,54 +54,59 @@ In the smtp.db.php file
 
 #### Database Setup
 
--- Create database
+1. Create database
 
-CREATE DATABASE mypelatologio;<br>
+```
+CREATE DATABASE mypelatologio;
+```
 
--- Create tables
+2. Create tables
 
-CREATE TABLE admins (<br>
-  adminsID int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,<br>
-  adminsFname varchar(50) NOT NULL,<br>
-  adminsLname varchar(50) NOT NULL,<br>
-  adminsEmail varchar(50) NOT NULL,<br>
-  adminsPhone varchar(50) NOT NULL,<br>
-  adminsUsername varchar(50) NOT NULL,<br>
-  adminsPassword varchar(50) NOT NULL,<br>
-  adminsRole varchar(50) NOT NULL,<br>
-  adminsCreate_at datetime NOT NULL DEFAULT current_timestamp()<br>
-);<br>
+```
+CREATE TABLE admins (
+  	adminsID int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  	adminsFname varchar(50) NOT NULL,
+  	adminsLname varchar(50) NOT NULL,
+  	adminsEmail varchar(50) NOT NULL,
+  	adminsPhone varchar(50) NOT NULL,
+  	adminsUsername varchar(50) NOT NULL,
+  	adminsPassword varchar(50) NOT NULL,
+  	adminsRole varchar(50) NOT NULL,
+  	adminsCreate_at datetime NOT NULL DEFAULT current_timestamp()
+);
 
 CREATE TABLE customers (<br>
-  customersID int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,<br>
-  customersFname varchar(50) NOT NULL,<br>
-  customersLname varchar(50) NOT NULL,<br>
-  customersEmail varchar(50) NOT NULL,<br>
-  customersPhone varchar(50) NOT NULL,<br>
-  customersCompany varchar(50) NOT NULL,<br>
-  customersAddress varchar(50) NOT NULL,<br>
-  customersLevel varchar(50) NOT NULL,<br>
-  customersCreate_at datetime NOT NULL DEFAULT current_timestamp()<br>
-);<br>
+	customersID int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  	customersFname varchar(50) NOT NULL,
+  	customersLname varchar(50) NOT NULL,
+  	customersEmail varchar(50) NOT NULL,
+  	customersPhone varchar(50) NOT NULL,
+  	customersCompany varchar(50) NOT NULL,
+  	customersAddress varchar(50) NOT NULL,
+  	customersLevel varchar(50) NOT NULL,
+	customersCreate_at datetime NOT NULL DEFAULT current_timestamp()
+);
 
-CREATE TABLE orders (<br>
-	ordersID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,<br>
-	ordersService VARCHAR(50) NOT NULL,<br>
-	ordersNameCustomer VARCHAR(50) NOT NULL,<br>
-	ordersEmailCustomer VARCHAR(50) NOT NULL,<br>
-	ordersStatus VARCHAR(50) NOT NULL,<br>
-	ordersReceipt INT(11) NOT NULL, <br>
-	ordersCreate_at datetime NOT NULL DEFAULT current_timestamp()<br>
-);<br>
+CREATE TABLE orders (
+	ordersID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	ordersService VARCHAR(50) NOT NULL,
+	ordersNameCustomer VARCHAR(50) NOT NULL,
+	ordersEmailCustomer VARCHAR(50) NOT NULL,
+	ordersStatus VARCHAR(50) NOT NULL,
+	ordersReceipt INT(11) NOT NULL,
+	ordersCreate_at datetime NOT NULL DEFAULT current_timestamp()
+);
 
 CREATE TABLE resetPasswords (<br>
-	resetPasswordsID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,<br>
-	resetPasswordsCode VARCHAR(255) NOT NULL,<br>
-	resetPasswordsEmail VARCHAR(50) NOT NULL<br>
-);<br>
+	resetPasswordsID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	resetPasswordsCode VARCHAR(255) NOT NULL,
+	resetPasswordsEmail VARCHAR(50) NOT NULL
+);
+```
 
--- Insert Data
+3. Insert Data
 
+```
 INSERT INTO admins (adminsFname, adminsLname, adminsEmail, adminsPhone, adminsUsername, adminsPassword, adminsRole)
 VALUES ("admin", "admin", "admin@gmail.com", "1234567890", "Admin", "123", "SuperAdmin");
 
@@ -149,6 +154,7 @@ VALUES ("SEO", "Shahid Crossley", "shahidcrossley@gmail.com", "Delivered", "50")
 
 INSERT INTO orders (ordersService, ordersNameCustomer, ordersEmailCustomer, ordersStatus, ordersReceipt)
 VALUES ("Eshop", "Mahi Copeland", "mahicopeland20@gmail.com", "Canceling", "500");
+```
 
 [Back To The Top](#mypelatologio)
 
