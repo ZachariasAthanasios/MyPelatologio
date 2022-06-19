@@ -83,12 +83,7 @@
                 </div>
 
                 <!-- Search Field -->
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </label>
-                </div>
+                <?php include ('../includes/search.inc.php'); ?>
                     
                 <!-- Users Profile Image -->
                 <div class="user">

@@ -48,7 +48,7 @@
     width: 100%;
 }
 
-.container-dashboard .main .topbar .search label input {
+.container-dashboard .main .topbar .search label .search-field {
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -59,11 +59,16 @@
     border: 2px solid var(--black-color);
 }
 
-.container-dashboard .main .topbar .search label i {
+.container-dashboard .main .topbar .search label .search-btn {
     position: absolute;
-    top: 0;
+    top: 7px;
     left: 10px;
     font-size: 1.2rem;
+    background-color: none;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 .container-dashboard .main .topbar .user {
