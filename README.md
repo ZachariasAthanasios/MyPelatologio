@@ -52,7 +52,9 @@ In the smtp.db.php file
 - $mail->setFrom('SEND FROM THAT EMAIL', 'Username');  |  The email address that will send the emails and Τhe username of the email address where it will appear in the messages
 - $mail->addReplyTo('info@REPLY EMAIL.com', 'Information');  |  Your Reply Email address
 
-#### Create the database
+#### Database Setup
+
+-- Create database
 
 CREATE DATABASE mypelatologio;<br>
 
@@ -67,6 +69,8 @@ CREATE TABLE admins (<br>
   adminsRole varchar(50) NOT NULL,<br>
   adminsCreate_at datetime NOT NULL DEFAULT current_timestamp()<br>
 );<br>
+
+-- Create tables
 
 CREATE TABLE customers (<br>
   customersID int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,<br>
@@ -95,6 +99,8 @@ CREATE TABLE resetPasswords (<br>
 	resetPasswordsCode VARCHAR(255) NOT NULL,<br>
 	resetPasswordsEmail VARCHAR(50) NOT NULL<br>
 );<br>
+
+-- Insert Data
 
 [Back To The Top](#mypelatologio)
 
