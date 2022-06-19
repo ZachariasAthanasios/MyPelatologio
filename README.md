@@ -43,15 +43,6 @@ Last step, go to: [127.0.0.1/MyPelatologio/index.php](http://127.0.0.1/MyPelatol
 <br>
 Don't forget to setup the database in [phpmyadmin](http://127.0.0.1/phpmyadmin).
 
-#### SMTP Setup
-
-Do not forget to enter your own SMTP details. I use Outlook because Gmail doesnt work. <br>
-In the smtp.db.php file
-- $mail->Username = 'YOUR EMAIL';  |  The email address that will send the emails
-- $mail->Password = 'YOUR PASSWORD';  |  The password
-- $mail->setFrom('SEND FROM THAT EMAIL', 'Username');  |  The email address that will send the emails and Τhe username of the email address where it will appear in the messages
-- $mail->addReplyTo('info@REPLY EMAIL.com', 'Information');  |  Your Reply Email address
-
 #### Database Setup
 
 1. Create database
@@ -155,6 +146,16 @@ VALUES ("SEO", "Shahid Crossley", "shahidcrossley@gmail.com", "Delivered", "50")
 INSERT INTO orders (ordersService, ordersNameCustomer, ordersEmailCustomer, ordersStatus, ordersReceipt)
 VALUES ("Eshop", "Mahi Copeland", "mahicopeland20@gmail.com", "Canceling", "500");
 ```
+
+#### SMTP Setup
+
+Do not forget to enter your own SMTP details. I use Outlook because Gmail doesnt work. <br>
+In the smtp.db.php file
+
+- $mail->Username = 'YOUR EMAIL';  |  The email address that will send the emails
+- $mail->Password = 'YOUR PASSWORD';  |  The password
+- $mail->setFrom('SEND FROM THAT EMAIL', 'Username');  |  The email address that will send the emails and Τhe username of the email address where it will appear in the messages
+- $mail->addReplyTo('info@REPLY EMAIL.com', 'Information');  |  Your Reply Email address
 
 [Back To The Top](#mypelatologio)
 
