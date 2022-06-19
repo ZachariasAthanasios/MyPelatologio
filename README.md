@@ -66,7 +66,7 @@ CREATE TABLE admins (<br>
   adminsPassword varchar(50) NOT NULL,<br>
   adminsRole varchar(50) NOT NULL,<br>
   adminsCreate_at datetime NOT NULL DEFAULT current_timestamp()<br>
-)<br>
+);<br>
 
 CREATE TABLE customers (<br>
   customersID int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,<br>
@@ -78,7 +78,7 @@ CREATE TABLE customers (<br>
   customersAddress varchar(50) NOT NULL,<br>
   customersLevel varchar(50) NOT NULL,<br>
   customersCreate_at datetime NOT NULL DEFAULT current_timestamp()<br>
-)<br>
+);<br>
 
 CREATE TABLE orders (<br>
 	ordersID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,<br>
@@ -86,6 +86,7 @@ CREATE TABLE orders (<br>
 	ordersNameCustomer VARCHAR(50) NOT NULL,<br>
 	ordersEmailCustomer VARCHAR(50) NOT NULL,<br>
 	ordersStatus VARCHAR(50) NOT NULL,<br>
+	ordersReceipt INT(11) NOT NULL, <br>
 	ordersCreate_at datetime NOT NULL DEFAULT current_timestamp()<br>
 );<br>
 
