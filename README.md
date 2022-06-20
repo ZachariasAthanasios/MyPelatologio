@@ -35,13 +35,13 @@ Content Management System (CMS) using HTML, CSS, JavaScript, PHP, MySQL.
 
 #### Project Setup
 
-For localhost use you will need [Xampp](https://www.apachefriends.org/download.html)
-<br>
-Save the project in htdocs folder inside the xampp folder.
-<br>
-Last step, go to: [127.0.0.1/MyPelatologio/index.php](http://127.0.0.1/MyPelatologio/index.php)
-<br>
-Don't forget to setup the database in [phpmyadmin](http://127.0.0.1/phpmyadmin).
+- For localhost use you will need [Xampp](https://www.apachefriends.org/download.html)
+
+- Save the project in **htdocs** folder inside the Xampp folder.
+
+- Last step, go to: [127.0.0.1/MyPelatologio/index.php](http://127.0.0.1/MyPelatologio/index.php)
+
+- Don't forget to setup the database in [phpmyadmin](http://127.0.0.1/phpmyadmin).
 
 #### Database Setup
 
@@ -88,7 +88,7 @@ CREATE TABLE orders (
 	ordersCreate_at datetime NOT NULL DEFAULT current_timestamp()
 );
 
-CREATE TABLE resetPasswords (<br>
+CREATE TABLE resetPasswords (
 	resetPasswordsID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	resetPasswordsCode VARCHAR(255) NOT NULL,
 	resetPasswordsEmail VARCHAR(50) NOT NULL
