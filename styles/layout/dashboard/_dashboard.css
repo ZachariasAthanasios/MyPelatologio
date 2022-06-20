@@ -39,6 +39,7 @@
 
 .container-dashboard .main .topbar .search {
     position: relative;
+    right: 35%;
     width: 400px;
     margin: 0 10px;
 }

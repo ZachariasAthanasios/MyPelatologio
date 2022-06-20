@@ -12,7 +12,7 @@
     <!-- Page Title -->
     <title>Search Results</title>
 
-    <!-- Σύνδεση Favicon Icon -->
+    <!-- Favicon Icon -->
     <link rel="icon" href="images/coding.jpeg" type="image/x-icon">
 
     <!-- Font-Awesome CDN Link 6.1.1 -->
@@ -49,10 +49,6 @@
                 <!-- Search Field -->
                 <?php include ('includes/search.inc.php'); ?>
                     
-                <!-- Users Profile Image -->
-                <div class="user">
-                    <img src="./images/userProfileImage.jpg" alt="User Profile Image">
-                </div>
             </div>
 
             <div class="details-admin">

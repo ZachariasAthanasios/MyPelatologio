@@ -48,10 +48,6 @@
                 <!-- Search Field -->
                 <?php include ('includes/search.inc.php'); ?>
                     
-                <!-- Users Profile Image -->
-                <div class="user">
-                    <img src="./images/userProfileImage.jpg" alt="User Profile Image">
-                </div>
             </div>
 
             <!-- Customer Detail List -->

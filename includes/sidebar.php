@@ -40,14 +40,6 @@
             </a>
         </li>
 
-        <!-- Settings -->
-        <li>
-            <a href="http://localhost/MyPelatologio/settings.php">
-                <span class="icon"> <i class="fa-solid fa-gear"></i> </span>
-                <span class="title">Settings</span>
-            </a>
-        </li>
-
         <!-- Logout -->
         <li>
             <a href="http://localhost/MyPelatologio/database/logout.db.php">
