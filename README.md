@@ -1,7 +1,7 @@
 # MyPelatologio
 Content Management System (CMS) using HTML, CSS, JavaScript, PHP, MySQL | Live Preview soon available
 
-![Project Image](https://cdn.discordapp.com/attachments/924363712821882890/987764423412297759/project-image.png)
+![Project Image](https://cdn.discordapp.com/attachments/924363712821882890/988512287063158814/mypelatologio.png)
 
 ---
 
