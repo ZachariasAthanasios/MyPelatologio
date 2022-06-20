@@ -28,45 +28,45 @@
 		</div>
 		<div class="login-content">
 
-            <!-- Login Form -->
+			<!-- Login Form -->
 			<form action="database/login.db.php" method="POST">
 				<img src="images/user.svg">
 				<h2 class="title">Welcome</h2>
 
-                <!-- Username Input -->
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" name="username" class="input">
-           		   </div>
-           		</div>
+				<!-- Username Input -->
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" name="username" class="input">
+					</div>
+				</div>
 
-                <!-- Password Input -->
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" name="password" class="input password">
-            	   </div>
-            	</div>
+				<!-- Password Input -->
+				<div class="input-div pass">
+					<div class="i"> 
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Password</h5>
+						<input type="password" name="password" class="input password">
+					</div>
+				</div>
 
-                <!--Forgot Password link -->
-            	<a class="forgot-password" href="./forgotPassword.php">Forgot Password?</a>
+				<!--Forgot Password link -->
+				<a class="forgot-password" href="./forgotPassword.php">Forgot Password?</a>
 
-                <!-- Login Button -->
-            	<input type="submit" name="submit" class="btn" value="Login">
+				<!-- Login Button -->
+				<input type="submit" name="submit" class="btn" value="Login">
 
 				<!-- Error Messages -->
 				<?php include ('includes/indexErrorMessages.inc.php'); ?>
-            </form>
-        </div>
-    </div>
-
+			</form>
+        	</div>
+	</div>
+	
     <!-- Custom JS File Link -->
     <script type="text/javascript" src="js/main.js"></script>
 </body>
