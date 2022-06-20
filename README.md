@@ -88,7 +88,7 @@ CREATE TABLE orders (
 	ordersCreate_at datetime NOT NULL DEFAULT current_timestamp()
 );
 
-CREATE TABLE resetPasswords (<br>
+CREATE TABLE resetPasswords (
 	resetPasswordsID INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	resetPasswordsCode VARCHAR(255) NOT NULL,
 	resetPasswordsEmail VARCHAR(50) NOT NULL
