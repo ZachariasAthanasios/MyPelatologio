@@ -12,7 +12,7 @@
     <!-- Page Title -->
     <title>Reset Password</title>
 
-    <!-- Σύνδεση Favicon Icon -->
+    <!-- Favicon Icon -->
     <link rel="icon" href="images/coding.jpeg" type="image/x-icon">
 
     <!-- Font-Awesome CDN Link 6.1.1 -->
@@ -28,27 +28,27 @@
 		</div>
 		<div class="login-content">
 
-            <!-- Forgot Password Form -->
+			<!-- Forgot Password Form -->
 			<form action="database/smtp.db.php" method="POST">
 				<img src="images/user.svg">
 				<h2 class="title">Reset Password</h2>
 
-                <!-- Email Input -->
-           		<div class="input-div one">
-           		   <div class="i">
-                        <i class="fa-solid fa-envelope"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Email</h5>
-           		   		<input type="text" name="email" class="input" autocomplete="off">
-           		   </div>
-           		</div>
+				<!-- Email Input -->
+				<div class="input-div one">
+				   <div class="i">
+					<i class="fa-solid fa-envelope"></i>
+				   </div>
+				   <div class="div">
+					<h5>Email</h5>
+					<input type="text" name="email" class="input" autocomplete="off">
+				   </div>
+				</div>
 
-                <!-- Reset Password Button -->
-            	<input type="submit" name="submit" class="btn" value="Reset Password">
-            </form>
-        </div>
-    </div>
+				<!-- Reset Password Button -->
+				<input type="submit" name="submit" class="btn" value="Reset Password">
+			</form>
+        	</div>
+    	</div>
 
     <!-- Custom JS File Link -->
     <script type="text/javascript" src="js/main.js"></script>
